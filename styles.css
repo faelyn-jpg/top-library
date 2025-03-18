@@ -1,0 +1,20 @@
+.container {
+  background-color: burlywood;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.header {
+  grid-column: span 2;
+  height: 200px;
+  background-color: lightpink;
+}
+
+.nav {
+  background-color: aquamarine;
+  grid-row: 2 / 3;
+}
+
+.book-container {
+  display: grid;
+}
