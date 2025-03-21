@@ -17,7 +17,40 @@
       <button class="add-book">Add New Book</button>
       <dialog>
         <button autofocus>Close</button>
-        <p>here's some stuff</p>
+        <form>
+          <section>
+            <p>
+              <label for="new-title">
+                <span>Title</span>
+              </label>
+              <input type="text" name="new-title" id="new-title" required>
+            </p>
+            <p>
+              <label for="new-author">
+                <span>Author</span>
+              </label>
+              <input type="text" name="new-author" id="new-author" required>
+            </p>
+            <p>
+              <label for="new-pages">
+                <span>How many pages?</span>
+              </label>
+              <input type="text" name="new-pages" id="new-pages" required>
+            </p>
+            <p>
+              <legend>
+                <span>Have you read it?</span>
+              </legend>
+              <input type="radio" name="new-read" id="yes" checked>
+              <label for="yes">Yes</label>
+              <input type="radio" name="new-read" id="no">
+              <label for="no">No</label>
+            </p>
+          </section>
+          <section>
+            <button type="submit" id="submit">Add new book</button>
+          </section>
+        </form>
       </dialog>
 
     </div>
