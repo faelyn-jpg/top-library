@@ -20,7 +20,7 @@ class Book {
     this.desc = desc
   }
 
-  readBook(readBook) {
+  readBook() {
     let result
     if (this.read === 'yes') {
       this.read = 'no'
@@ -32,7 +32,20 @@ class Book {
     refreshDisplay(Book, this.read)
     return result
   }
+
+  get book() {
+    return {
+      title: this.title,
+      author: this.author,
+      pages: this.pages,
+      read: this.read,
+      image: this.image,
+      desc: this.desc,
+    }
+  }
 }
+
+function Dashboard() {}
 
 function addBookToLibrary(title, author, pages, read, image, desc) {
   const id = crypto.randomUUID()
@@ -104,7 +117,7 @@ function displayBooks() {
       buttonContainer.appendChild(readBook)
       buttonContainer.appendChild(removeBook)
       readBook.addEventListener('click', () => {
-        read.textContent = book.readBook(book, read, readBook)
+        read.textContent = book.readBook()
         buttonContainer.insertBefore(readBook, removeBook)
       })
     }
@@ -129,14 +142,6 @@ addBookToLibrary(
   'no',
   './public/images/books.jpg',
   'some desc'
-)
-addBookToLibrary(
-  'Fullmetal Alchemist',
-  'Hiromu Arakawa',
-  '4738',
-  'yes',
-  './public/images/fullmetal-alchemist.jpg',
-  'a manga'
 )
 addBookToLibrary(
   'Fullmetal Alchemist',
