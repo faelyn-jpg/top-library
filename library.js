@@ -1,13 +1,3 @@
-const mainContainer = document.querySelector('.container')
-const container = document.querySelector('.book-container')
-const addBook = document.querySelector('.add-book')
-const dialog = document.querySelector('dialog')
-const showButton = document.querySelector('dialog + button')
-const closeButton = document.querySelector('dialog button')
-const submit = document.querySelector('#submit')
-
-//refactor into class
-
 class Book {
   constructor(title, author, id, pages, read, image, desc) {
     this.title = title
@@ -67,6 +57,11 @@ function Library() {
 
 ;(function Dashboard() {
   const library = Library()
+  const container = document.querySelector('.book-container')
+  const addBook = document.querySelector('.add-book')
+  const dialog = document.querySelector('dialog')
+  const closeButton = document.querySelector('dialog button')
+  const submit = document.querySelector('#submit')
 
   //this updates the screen .... super messy
   const displayBooks = () => {
