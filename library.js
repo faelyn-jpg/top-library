@@ -75,7 +75,7 @@ function displayBooks() {
       author.classList.add('author')
       pages.classList.add('pages')
       read.classList.add('read')
-      newBook.setAttribute('id', book.id)
+      bookFormat.setAttribute('id', book.id)
       image.src = book?.image
       removeBook.classList.add('remove-book')
       title.textContent = book.title
