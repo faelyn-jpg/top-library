@@ -29,7 +29,7 @@ class Book {
       this.read = 'yes'
       result = 'Read'
     }
-    refreshDisplay(this.book, this.read)
+    refreshDisplay(Book, this.read)
     return result
   }
 }
