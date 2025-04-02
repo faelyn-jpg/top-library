@@ -80,7 +80,8 @@ h6 {
   background-color: wheat;
   display: grid;
   grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 2fr;
   gap: 20px;
 }
 
@@ -99,6 +100,12 @@ h6 {
   margin-top: 20px;
 }
 
+.book-format {
+  background-color: azure;
+  display: grid;
+  grid-template-columns: auto 2fr;
+}
+
 .book {
   background-color: burlywood;
   display: flex;
@@ -106,5 +113,9 @@ h6 {
   flex-direction: column;
   align-items: center;
   font-size: large;
-  height: 340px;
+  height: 380px;
+}
+
+.book-format > div > img {
+  max-height: 380px;
 }
